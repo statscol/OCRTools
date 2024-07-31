@@ -70,7 +70,8 @@ def process_pdf(pdf_file:str,save_images:bool,output_path:str):
   return processor.process(pdf_file,output_path,save_images)
   
 if __name__=="__main__":
-     ##if using cuda,add 'use_gpu':True
+    # if using cuda,add 'use_gpu':True
+    # results contain per page index the following keys: text, images and tables
     results=process_pdf.main(standalone_mode=False)
     for k,v in results.items():
         print(f"Page {k}: {v['text']}")
