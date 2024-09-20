@@ -2,6 +2,23 @@
 
 This repo contains tools for parsing pdf files and its content using open source frameworks and models.
 
+# Setup 
+
+- Using a virtual env of your preference with python 3.9+ run the following
+
+```bash
+conda create --name YOUR_ENV_NAME python==3.9 
+conda activate YOUR_ENV_NAME
+pip install -r requirements.txt
+```
+
+```bash
+python -m venv YOUR_ENV_NAME
+source YOUR_ENV_NAME/bin/activate
+pip install -r requirements.txt
+```
+
+# Usage
 
 - Approach 1: traditional pypdf|pymuPDF parsers to extract text,images and tables. See `pymupdf_parse.py`
 
