@@ -53,7 +53,7 @@ class PaddlePDFParser:
       if save_images:
         for idx_img,det in enumerate(detections):
           images.append(det['img'])
-          cv2.imwrite(f"{output_path}/{Path(pdf_filepath).name.split('.')[0]}_image_{idx_img}.jpg",det['img'])
+          cv2.imwrite(f"{output_path}/{Path(pdf_filepath).name.split('.')[0]}_image_page{idx_page+1}_{idx_img}.jpg",det['img'])
       results[idx_page]['images']=images
       results[idx_page]['tables']=[detection['res']['html'] for detection in detections if detection['type']=='table']
       results[idx_page]['text']=text

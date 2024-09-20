@@ -78,7 +78,7 @@ class MultiStepPDFParser:
       text=""
       for idx_img,img in enumerate(images):
         if save_images:
-          cv2.imwrite(f"{output_path}/{Path(pdf_filepath).name.split('.')[0]}_image_{idx_img}.jpg",img)
+          cv2.imwrite(f"{output_path}/{Path(pdf_filepath).name.split('.')[0]}_image_page_{idx_page+1}{idx_img+1}.jpg",img)
         text+=self.get_text(img) if detections.class_id[idx_img]==self.text_cls_id else ""
       results[idx_page]['images']=images
       results[idx_page]['types']=detections.class_id
