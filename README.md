@@ -7,12 +7,14 @@ This repo contains tools for parsing pdf files and its content using open source
 - Using a virtual env of your preference with python 3.9+ run the following
 
 ```bash
+#if using conda
 conda create --name YOUR_ENV_NAME python==3.9 
 conda activate YOUR_ENV_NAME
 pip install -r requirements.txt
 ```
 
 ```bash
+#if using venv
 python -m venv YOUR_ENV_NAME
 source YOUR_ENV_NAME/bin/activate
 pip install -r requirements.txt
